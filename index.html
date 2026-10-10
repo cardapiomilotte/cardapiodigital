@@ -1,6 +1,25 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cardápio Milotte Cookie</title>
+<meta name="description" content="Escolha seus cookies recheados da Milotte e envie o pedido pronto pelo WhatsApp.">
+<meta property="og:title" content="Cardápio Milotte Cookie">
+<meta property="og:description" content="Escolha seus cookies recheados e envie o pedido pronto pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBEDE0">
+<meta name="color-scheme" content="light only">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%23FBEDE0%22/%3E%3Cg%20transform%3D%22translate%289%209%29%20scale%28.82%29%22%3E%3Cpath%20d%3D%22M58.32%2010.87%20A9.2%209.2%200%200%200%2073.51%2017.64%20A9.2%209.2%200%200%200%2084.64%2030.00%20A9.2%209.2%200%200%200%2089.78%2045.82%20A40%2040%200%201%201%2058.32%2010.87Z%22%20fill%3D%22none%22%20stroke%3D%22%235F381B%22%20stroke-width%3D%225%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2236%22%20cy%3D%2234%22%20r%3D%225%22%20fill%3D%22%235F381B%22/%3E%3Ccircle%20cx%3D%2258%22%20cy%3D%2249%22%20r%3D%224%22%20fill%3D%22%235F381B%22/%3E%3Ccircle%20cx%3D%2233%22%20cy%3D%2258%22%20r%3D%225%22%20fill%3D%22%235F381B%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2270%22%20r%3D%225%22%20fill%3D%22%235F381B%22/%3E%3Ccircle%20cx%3D%2269%22%20cy%3D%2264%22%20r%3D%224.2%22%20fill%3D%22%235F381B%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root { color-scheme: light; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
 <style>
 /* Layout: tudo no eixo central. A marca abre a página como no logo; cada foto é um círculo com uma mordida leve, como o cookie do logo;
    o pedido abre por cima (tela cheia no celular, janela centralizada no computador).
@@ -56,9 +75,6 @@ ul, ol { padding: 0; list-style: none; }
 .info .estado { color: var(--ink); font-weight: 500; }
 .ponto { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--warn); flex: none; }
 .ponto.aberto { background: var(--ok); }
-.atalhos { display: flex; justify-content: center; padding-top: 0.25rem; }
-.atalhos:empty { display: none; }
-.atalho { border: 1px solid var(--gold); background: transparent; color: var(--brand); border-radius: 999px; padding: 0.6rem 1.1rem; font-size: 0.9375rem; font-weight: 500; }
 
 /* ---------- vitrine ---------- */
 .cat h2 { font-family: var(--f-display); font-style: italic; font-weight: 500; font-size: 1.625rem; color: var(--brand); text-align: center; padding-top: 2rem; }
@@ -80,7 +96,7 @@ ul, ol { padding: 0; list-style: none; }
 .passo output { flex: 1; min-width: 1.5rem; text-align: center; font-weight: 600; font-size: 1.0625rem; font-variant-numeric: tabular-nums; }
 .passo.pequeno { display: inline-flex; width: auto; min-height: 2.5rem; background: transparent; color: var(--brand); border-color: var(--gold); }
 .passo.pequeno button { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
-.passo, .mais, .foto, .botao, .atalho { -webkit-user-select: none; user-select: none; }
+.passo, .mais, .foto, .botao { -webkit-user-select: none; user-select: none; }
 
 /* ---------- pedido (janela) ---------- */
 .fundo { position: fixed; inset: 0; z-index: 19; background: var(--veil); }
@@ -188,7 +204,8 @@ ul, ol { padding: 0; list-style: none; }
   .foto:active, .mais:active, .botao:active { transform: scale(0.97); }
 }
 </style>
-
+</head>
+<body>
 <div id="moldes" style="position:absolute;width:0;height:0;overflow:hidden"></div>
 <div class="demo" id="aviso-demo" hidden></div>
 
@@ -201,7 +218,6 @@ ul, ol { padding: 0; list-style: none; }
     <p class="chamada">Escolha seus sabores e envie o pedido pelo WhatsApp</p>
     <p class="aviso central" id="aviso-fechado" role="status" hidden></p>
     <ul class="info" id="info-loja"></ul>
-    <div class="atalhos" id="atalhos"></div>
   </header>
 
   <main id="cardapio"></main>
@@ -383,7 +399,7 @@ async function consultarMapa(params) {
   const espera = 1100 - (Date.now() - ultimaConsulta);
   if (espera > 0) await new Promise((r) => setTimeout(r, espera));
   ultimaConsulta = Date.now();
-  const ctrl = new AbortController(), limite = setTimeout(() => ctrl.abort(), 8000);
+  const ctrl = new AbortController(), limite = setTimeout(() => ctrl.abort(), 5000);
   try {
     const url = "https://nominatim.openstreetmap.org/search?" + new URLSearchParams({ format: "jsonv2", limit: "1", countrycodes: "br", "accept-language": "pt-BR", ...params });
     const r = await fetch(url, { signal: ctrl.signal });
@@ -404,10 +420,15 @@ async function calcularFrete() {
   const meu = ++pedidoFrete;
   Object.assign(frete, { status: "buscando", chave });
   atualizarResumo();
+  // Mapa lento não pode segurar o pedido: depois de 7 s o frete fica "a loja confirma" e o envio é liberado.
+  const prazo = setTimeout(() => {
+    if (meu === pedidoFrete && frete.chave === chave && frete.status === "buscando") { Object.assign(frete, { status: "falhou", km: 0, valor: 0, aprox: false }); atualizarResumo(); }
+  }, 7000);
   let aprox = false;
   let ponto = await consultarMapa({ ...local, street: `${numero} ${rua}` });
   if (ponto === null) ponto = await consultarMapa({ ...local, street: rua });
   if (ponto === null) { ponto = await consultarMapa({ q: `${bairro}, ${ENT.cidade}, ${ENT.uf}` }); aprox = !!ponto; }   // não achou a rua: usa o centro do bairro
+  clearTimeout(prazo);
   if (meu !== pedidoFrete) return;                        // o endereço mudou no meio da consulta
   let res = { status: "falhou", km: 0, valor: 0, aprox: false };
   if (ponto) {
@@ -541,9 +562,6 @@ function desenharControles() {
   $("#barra-n").textContent = c.unidades;
   $("#barra-total").textContent = reais(c.subtotal);
   $("#abrir-pedido").setAttribute("aria-label", `Ver pedido: ${plural(c.unidades, "cookie", "cookies")}, ${reais(c.subtotal)}`);
-  const nUlt = estado.ultimo ? Object.values(estado.ultimo).reduce((a, b) => a + b, 0) : 0;
-  const atalho = estado.ultimo && c.unidades === 0 ? `<button class="atalho" type="button" data-acao="repetir">Repetir meu último pedido (${plural(nUlt, "cookie", "cookies")})</button>` : "";
-  if ($("#atalhos").innerHTML !== atalho) $("#atalhos").innerHTML = atalho;
 }
 
 function totaisHtml(c) {
@@ -661,7 +679,6 @@ document.addEventListener("click", (ev) => {
   else if (a === "abrir-sacola") abrirSacola(true);
   else if (a === "fechar-sacola") abrirSacola(false);
   else if (a === "copiar") copiar(el);
-  else if (a === "repetir") { estado.itens = { ...estado.ultimo }; salvar(); desenhar(); }
   else if (a === "novo") { estado.itens = {}; estado.obs = ""; estado.enviado = false; estado.erro = ""; estado.faltando = []; estado.pedidoId = novoId(); salvar(); desenhar(); abrirSacola(false); }
   else if (a === "enviar") {
     if (!aberta()) { ev.preventDefault(); desenharStatus(); desenhar(); return; }      // fechou enquanto a pessoa preenchia
@@ -677,7 +694,7 @@ document.addEventListener("click", (ev) => {
       return;
     }
     el.href = linkZap();                       // garante a mensagem mais recente; o próprio link abre o WhatsApp
-    estado.ultimo = { ...estado.itens }; estado.erro = ""; estado.faltando = []; salvar();
+    estado.erro = ""; estado.faltando = []; salvar();
     if (!estado.enviado) { estado.enviado = true; setTimeout(desenharSacola, 400); }
   }
 });
@@ -712,4 +729,5 @@ setInterval(conferirHorario, 30000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) conferirHorario(); });
 </script>
 
-</body></html>
+</body>
+</html>
