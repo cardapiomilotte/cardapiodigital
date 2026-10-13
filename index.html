@@ -243,8 +243,8 @@ const LOJA = {
   whatsapp: "19994680528",            // DDD + número, só dígitos
   entrega: {
     // FRETE POR DISTÂNCIA: o cardápio localiza o endereço do cliente no mapa e multiplica os km pela taxa combinada com o motoboy.
-    porKm: 160,                       // centavos por km (160 = R$ 1,60 por km; valor de teste). null = desligado: a loja confirma o frete no WhatsApp
-    minimo: 0,                        // valor mínimo do frete, em centavos (600 = R$ 6,00)
+    porKm: 230,                       // centavos por km (230 = R$ 2,30 por km). null = desligado: a loja confirma o frete no WhatsApp
+    minimo: 800,                      // valor mínimo do frete, em centavos (800 = R$ 8,00): vale até a conta por km passar disso
     idaEVolta: false,                 // true cobra o trajeto de ida e de volta
     arredondar: 50,                   // arredonda o frete para cima neste múltiplo, em centavos (50 = de 50 em 50 centavos)
     fatorRota: 1.3,                   // a distância é medida em linha reta e multiplicada por este fator para aproximar o caminho pelas ruas
